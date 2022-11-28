@@ -1,0 +1,110 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&display=swap");
+
+* {
+  /* outline: 2px solid green; */
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Open Sans", sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 100vh;
+}
+
+h1 {
+  margin-top: 2rem;
+  font-size: 3rem;
+  color: #aca1a1;
+}
+
+form {
+  min-width: 30rem;
+  position: relative;
+  margin: 3rem 0;
+  box-shadow: 0 0 20px 5px rgb(0, 0, 0, 0.3);
+  border-radius: 0.5rem;
+}
+
+form input {
+  border-radius: 0.5rem;
+  width: 100%;
+  padding: 1rem 1.5rem;
+  font-family: inherit;
+  border: none;
+}
+form input:focus{
+    outline: 3px solid rgb(255, 218, 223);
+    opacity: .8;
+}
+
+form input::placeholder {
+  font-size: 1.1rem;
+}
+
+ul li {
+  padding: 1rem 1.5rem;
+  list-style: none;
+  background-color: rgb(255, 218, 223);
+  cursor: pointer;
+  border-top: 1px solid rgb(152, 148, 148);
+  font-size: 1.1rem;
+}
+
+.add {
+  font-family: inherit;
+  background: transparent;
+  border: none;
+  position: absolute;
+  border-radius: 5px;
+  padding: 0.3rem;
+  top: -40px;
+  left: 0;
+  cursor: pointer;
+}
+.add:hover {
+  background-color: lightpink;
+  color: white;
+}
+
+.hidden {
+  text-decoration: line-through;
+  opacity: 0.7;
+  font-weight: normal;
+  font-size: 1rem;
+}
+
+.clear {
+  left: 83%;
+  width: 15%;
+  top: -40px;
+  z-index: 1;
+}
+
+*::selection {
+  background-color: pink;
+}
+
+@media screen and (max-width: 520px) {
+  form {
+    min-width: 90%;
+  }
+
+  form input{
+    padding: 1.3rem;
+  }
+
+  .clear {
+    width: 25%;
+    padding: .5rem;
+    left: 75%;
+    /* top: 9%; */
+    z-index: 1; 
+  }
+  .add{
+    padding: .5rem;
+  }
+}
